@@ -1,0 +1,719 @@
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestReport</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #summary {
+            width: 960px;
+            margin-bottom: 20px;
+        }
+
+        #summary th {
+            background-color: skyblue;
+            padding: 5px 12px;
+        }
+
+        #summary td {
+            background-color: lightblue;
+            text-align: center;
+            padding: 4px 8px;
+        }
+
+        .details {
+            width: 960px;
+            margin-bottom: 20px;
+        }
+
+        .details th {
+            background-color: skyblue;
+            padding: 5px 12px;
+        }
+
+        .details tr .passed {
+            background-color: lightgreen;
+        }
+
+        .details tr .failed {
+            background-color: red;
+        }
+
+        .details tr .unchecked {
+            background-color: gray;
+        }
+
+        .details td {
+            background-color: lightblue;
+            padding: 5px 12px;
+        }
+
+        .details .detail {
+            background-color: lightgrey;
+            font-size: smaller;
+            padding: 5px 10px;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        .details .success {
+            background-color: greenyellow;
+        }
+
+        .details .error {
+            background-color: red;
+        }
+
+        .details .failure {
+            background-color: salmon;
+        }
+
+        .details .skipped {
+            background-color: gray;
+        }
+
+        .button {
+            font-size: 1em;
+            padding: 6px;
+            width: 4em;
+            text-align: center;
+            background-color: #06d85f;
+            border-radius: 20px/50px;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+
+        a.button {
+            color: gray;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background: #2cffbd;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+            line-height: 25px;
+        }
+
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            width: 50%;
+            position: relative;
+            transition: all 3s ease-in-out;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .popup .close:hover {
+            color: #06d85f;
+        }
+
+        .popup .content {
+            max-height: 80%;
+            overflow: auto;
+            text-align: left;
+        }
+
+        .popup .separator {
+            color: royalblue
+        }
+
+        @media screen and (max-width: 700px) {
+            .box {
+                width: 70%;
+            }
+
+            .popup {
+                width: 70%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+<h1>API Test Report</h1>
+
+<h2>Summary</h2>
+<table id="summary">
+    <tr>
+        <th>START AT</th>
+        <td colspan="4">2024-02-17 09:32:08.218263 &#43;0800 CST m=&#43;0.004445568</td>
+    </tr>
+    <tr>
+        <th>DURATION</th>
+        <td colspan="4">2.487142853 seconds</td>
+    </tr>
+    <tr>
+        <th>PLATFORM</th>
+        <td>HttpRunnerPlus v4.3.6</td>
+        <td>go1.19</td>
+        <td colspan="2">darwin-amd64</td>
+    </tr>
+    <tr>
+        <th>STAT</th>
+        <th colspan="2">TESTCASES (success/fail)</th>
+        <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+        <td>total (details) =></td>
+        <td colspan="2">1 (1/0)</td>
+        <td colspan="2">3 (3/0/0/0)</td>
+    </tr>
+</table>
+
+<h2>Details</h2>
+
+<h3>request methods testcase with functions</h3>
+<table id="suite_0" class="details">
+    <tr>
+        <td>TOTAL: 3</td>
+        <td>SUCCESS: 3</td>
+        <td>FAILED: 0</td>
+        <td>ERROR: 0</td>
+        <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <th colspan="2">Name</th>
+        <th>Response Time</th>
+        <th>Detail</th>
+    </tr>  
+    <tr id="record_0_0">
+        <th class=success style="width:5em;">success</th>
+        <td colspan="2">get with params</td>
+        <td style="text-align:center;width:6em;">1048 ms</td>
+        <td class="detail">
+            <a class="button" href="#popup_log_0_0">log</a>
+            <div id="popup_log_0_0" class="overlay">
+                <div class="popup">
+                    <h2>Request and Response data</h2>
+                    <a class="close" href="#record_0_0">&times;</a>
+                    <div class="content">
+                        <h3>Name: get with params</h3>
+                        <h3>Request:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>headers</th>
+                                    <td align="left">
+                                        <pre>User-Agent: hrp/funppy</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>method</th>
+                                    <td align="left">
+                                        <pre>GET</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>url</th>
+                                    <td align="left">
+                                        <pre>https://postman-echo.com/get?foo1=debugtalk&amp;foo2=bar21&amp;sum_v=30000000</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3>Response:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>body</th>
+                                    <td align="left">
+                                        <pre>{
+    &#34;args&#34;: {
+    &#34;foo1&#34;: &#34;debugtalk&#34;,
+    &#34;foo2&#34;: &#34;bar21&#34;,
+    &#34;sum_v&#34;: &#34;30000000&#34;
+},
+    &#34;headers&#34;: {
+    &#34;accept-encoding&#34;: &#34;gzip&#34;,
+    &#34;host&#34;: &#34;postman-echo.com&#34;,
+    &#34;user-agent&#34;: &#34;hrp/funppy&#34;,
+    &#34;x-amzn-trace-id&#34;: &#34;Root=1-65d00c9a-517712603ab20ba60847306d&#34;,
+    &#34;x-forwarded-port&#34;: &#34;443&#34;,
+    &#34;x-forwarded-proto&#34;: &#34;https&#34;
+},
+    &#34;url&#34;: &#34;https://postman-echo.com/get?foo1=debugtalk\u0026foo2=bar21\u0026sum_v=30000000&#34;
+}</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>cookies</th>
+                                    <td align="left">
+                                        <pre>sails.sid: s%3AWqWviHvow1kYaD-V5um3Wo3Ceol97vc6.72Kq%2F9MG3gLHfLnCroi3BnTHWT4K4DlmpRXprLUX4VI</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>headers</th>
+                                    <td align="left">
+                                        <pre>Connection: keep-alive</pre>
+                                        <pre>Content-Length: 417</pre>
+                                        <pre>Content-Type: application/json; charset=utf-8</pre>
+                                        <pre>Date: Sat, 17 Feb 2024 01:32:10 GMT</pre>
+                                        <pre>Etag: W/&#34;1a1-TyB0o3jG7wvApx9Xm3s3gQAGU2I&#34;</pre>
+                                        <pre>Set-Cookie: sails.sid=s%3AWqWviHvow1kYaD-V5um3Wo3Ceol97vc6.72Kq%2F9MG3gLHfLnCroi3BnTHWT4K4DlmpRXprLUX4VI; Path=/; HttpOnly</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>proto</th>
+                                    <td align="left">
+                                        <pre>HTTP/1.1</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>status_code</th>
+                                    <td align="left">
+                                        <pre>200</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <h3>Validators:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>check</th>
+                                    <th>comparator</th>
+                                    <th>expect value</th>
+                                    <th>actual value</th>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        status_code
+                                    </td>
+                                    <td>equal</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        body.args.foo1
+                                    </td>
+                                    <td>equal</td>
+                                    <td>debugtalk</td>
+                                    <td>debugtalk</td>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        body.args.sum_v
+                                    </td>
+                                    <td>equal</td>
+                                    <td>30000000</td>
+                                    <td>30000000</td>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        body.args.foo2
+                                    </td>
+                                    <td>equal</td>
+                                    <td>bar21</td>
+                                    <td>bar21</td>
+                                </tr>
+                            </table>
+
+                            <h3>Statistics:</h3>
+                            <div style="overflow: auto">
+                                <table>
+                                    <tr>
+                                        <th>content_size(bytes)</th>
+                                        <td>417</td>
+                                    </tr>
+                                    <tr>
+                                        <th>response_time(ms)</th>
+                                        <td>1048</td>
+                                    </tr>
+                                    <tr>
+                                        <th>elapsed(ms)</th>
+                                        <td>1048</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </td>
+    </tr>  
+    <tr id="record_0_1">
+        <th class=success style="width:5em;">success</th>
+        <td colspan="2">post raw text</td>
+        <td style="text-align:center;width:6em;">253 ms</td>
+        <td class="detail">
+            <a class="button" href="#popup_log_0_1">log</a>
+            <div id="popup_log_0_1" class="overlay">
+                <div class="popup">
+                    <h2>Request and Response data</h2>
+                    <a class="close" href="#record_0_1">&times;</a>
+                    <div class="content">
+                        <h3>Name: post raw text</h3>
+                        <h3>Request:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>body</th>
+                                    <td align="left">
+                                        <pre>This is expected to be sent back as part of response body: bar12-config_bar2-bar32.</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>headers</th>
+                                    <td align="left">
+                                        <pre>Content-Type: text/plain</pre>
+                                        <pre>User-Agent: hrp/funppy</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>method</th>
+                                    <td align="left">
+                                        <pre>POST</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>url</th>
+                                    <td align="left">
+                                        <pre>https://postman-echo.com/post/</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3>Response:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>body</th>
+                                    <td align="left">
+                                        <pre>{
+    &#34;args&#34;: {
+    
+},
+    &#34;data&#34;: &#34;This is expected to be sent back as part of response body: bar12-config_bar2-bar32.&#34;,
+    &#34;files&#34;: {
+    
+},
+    &#34;form&#34;: {
+    
+},
+    &#34;headers&#34;: {
+    &#34;accept-encoding&#34;: &#34;gzip&#34;,
+    &#34;content-length&#34;: &#34;83&#34;,
+    &#34;content-type&#34;: &#34;text/plain&#34;,
+    &#34;cookie&#34;: &#34;sails.sid=s%3AWqWviHvow1kYaD-V5um3Wo3Ceol97vc6.72Kq%2F9MG3gLHfLnCroi3BnTHWT4K4DlmpRXprLUX4VI&#34;,
+    &#34;host&#34;: &#34;postman-echo.com&#34;,
+    &#34;user-agent&#34;: &#34;hrp/funppy&#34;,
+    &#34;x-amzn-trace-id&#34;: &#34;Root=1-65d00c9a-2bb271614f6622f53e7956a2&#34;,
+    &#34;x-forwarded-port&#34;: &#34;443&#34;,
+    &#34;x-forwarded-proto&#34;: &#34;https&#34;
+},
+    &#34;json&#34;: null,
+    &#34;url&#34;: &#34;https://postman-echo.com/post/&#34;
+}</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>cookies</th>
+                                    <td align="left">
+                                        <pre>sails.sid: s%3AkzIT-iJ_dIEJ8e-zrGsyqDyN5WgK7JFa.6TYyugMRbdBj%2Bp%2Fy3uuFfbPLihplJhlu7B%2BUABzSWKI</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>headers</th>
+                                    <td align="left">
+                                        <pre>Connection: keep-alive</pre>
+                                        <pre>Content-Length: 619</pre>
+                                        <pre>Content-Type: application/json; charset=utf-8</pre>
+                                        <pre>Date: Sat, 17 Feb 2024 01:32:10 GMT</pre>
+                                        <pre>Etag: W/&#34;26b-yJyLCNSlyHy5WmrZ1u91OoZmlAs&#34;</pre>
+                                        <pre>Set-Cookie: sails.sid=s%3AkzIT-iJ_dIEJ8e-zrGsyqDyN5WgK7JFa.6TYyugMRbdBj%2Bp%2Fy3uuFfbPLihplJhlu7B%2BUABzSWKI; Path=/; HttpOnly</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>proto</th>
+                                    <td align="left">
+                                        <pre>HTTP/1.1</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>status_code</th>
+                                    <td align="left">
+                                        <pre>200</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <h3>Validators:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>check</th>
+                                    <th>comparator</th>
+                                    <th>expect value</th>
+                                    <th>actual value</th>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        status_code
+                                    </td>
+                                    <td>equal</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        body.data
+                                    </td>
+                                    <td>equal</td>
+                                    <td>This is expected to be sent back as part of response body: bar12-config_bar2-bar32.</td>
+                                    <td>This is expected to be sent back as part of response body: bar12-config_bar2-bar32.</td>
+                                </tr>
+                            </table>
+
+                            <h3>Statistics:</h3>
+                            <div style="overflow: auto">
+                                <table>
+                                    <tr>
+                                        <th>content_size(bytes)</th>
+                                        <td>619</td>
+                                    </tr>
+                                    <tr>
+                                        <th>response_time(ms)</th>
+                                        <td>253</td>
+                                    </tr>
+                                    <tr>
+                                        <th>elapsed(ms)</th>
+                                        <td>253</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </td>
+    </tr>  
+    <tr id="record_0_2">
+        <th class=success style="width:5em;">success</th>
+        <td colspan="2">post form data</td>
+        <td style="text-align:center;width:6em;">229 ms</td>
+        <td class="detail">
+            <a class="button" href="#popup_log_0_2">log</a>
+            <div id="popup_log_0_2" class="overlay">
+                <div class="popup">
+                    <h2>Request and Response data</h2>
+                    <a class="close" href="#record_0_2">&times;</a>
+                    <div class="content">
+                        <h3>Name: post form data</h3>
+                        <h3>Request:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>body</th>
+                                    <td align="left">
+                                        <pre>foo1=config_bar1&amp;foo2=bar23&amp;foo3=bar21</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>headers</th>
+                                    <td align="left">
+                                        <pre>Content-Type: application/x-www-form-urlencoded</pre>
+                                        <pre>User-Agent: hrp/funppy</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>method</th>
+                                    <td align="left">
+                                        <pre>POST</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>url</th>
+                                    <td align="left">
+                                        <pre>https://postman-echo.com/post/</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3>Response:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>body</th>
+                                    <td align="left">
+                                        <pre>{
+    &#34;args&#34;: {
+    
+},
+    &#34;data&#34;: &#34;&#34;,
+    &#34;files&#34;: {
+    
+},
+    &#34;form&#34;: {
+    &#34;foo1&#34;: &#34;config_bar1&#34;,
+    &#34;foo2&#34;: &#34;bar23&#34;,
+    &#34;foo3&#34;: &#34;bar21&#34;
+},
+    &#34;headers&#34;: {
+    &#34;accept-encoding&#34;: &#34;gzip&#34;,
+    &#34;content-length&#34;: &#34;38&#34;,
+    &#34;content-type&#34;: &#34;application/x-www-form-urlencoded&#34;,
+    &#34;cookie&#34;: &#34;sails.sid=s%3AkzIT-iJ_dIEJ8e-zrGsyqDyN5WgK7JFa.6TYyugMRbdBj%2Bp%2Fy3uuFfbPLihplJhlu7B%2BUABzSWKI&#34;,
+    &#34;host&#34;: &#34;postman-echo.com&#34;,
+    &#34;user-agent&#34;: &#34;hrp/funppy&#34;,
+    &#34;x-amzn-trace-id&#34;: &#34;Root=1-65d00c9a-4a13c9d7070398bc207df0bc&#34;,
+    &#34;x-forwarded-port&#34;: &#34;443&#34;,
+    &#34;x-forwarded-proto&#34;: &#34;https&#34;
+},
+    &#34;json&#34;: {
+    &#34;foo1&#34;: &#34;config_bar1&#34;,
+    &#34;foo2&#34;: &#34;bar23&#34;,
+    &#34;foo3&#34;: &#34;bar21&#34;
+},
+    &#34;url&#34;: &#34;https://postman-echo.com/post/&#34;
+}</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>cookies</th>
+                                    <td align="left">
+                                        <pre>sails.sid: s%3A5MBCXAXymwAtVDl4WLXH_UofUNyoI2ek.fXEE8Mx80Pu2Mq2P0RcfR%2FTPyLxeMtwsUGoeFB0nOqI</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>headers</th>
+                                    <td align="left">
+                                        <pre>Connection: keep-alive</pre>
+                                        <pre>Content-Length: 703</pre>
+                                        <pre>Content-Type: application/json; charset=utf-8</pre>
+                                        <pre>Date: Sat, 17 Feb 2024 01:32:10 GMT</pre>
+                                        <pre>Etag: W/&#34;2bf-Dbw0sWSSi&#43;puU7nIxnh&#43;ZDCQ8Hk&#34;</pre>
+                                        <pre>Set-Cookie: sails.sid=s%3A5MBCXAXymwAtVDl4WLXH_UofUNyoI2ek.fXEE8Mx80Pu2Mq2P0RcfR%2FTPyLxeMtwsUGoeFB0nOqI; Path=/; HttpOnly</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>proto</th>
+                                    <td align="left">
+                                        <pre>HTTP/1.1</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>status_code</th>
+                                    <td align="left">
+                                        <pre>200</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <h3>Validators:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>check</th>
+                                    <th>comparator</th>
+                                    <th>expect value</th>
+                                    <th>actual value</th>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        status_code
+                                    </td>
+                                    <td>equal</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        body.form.foo1
+                                    </td>
+                                    <td>equal</td>
+                                    <td>config_bar1</td>
+                                    <td>config_bar1</td>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        body.form.foo2
+                                    </td>
+                                    <td>equal</td>
+                                    <td>bar23</td>
+                                    <td>bar23</td>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        body.form.foo3
+                                    </td>
+                                    <td>equal</td>
+                                    <td>bar21</td>
+                                    <td>bar21</td>
+                                </tr>
+                            </table>
+
+                            <h3>Statistics:</h3>
+                            <div style="overflow: auto">
+                                <table>
+                                    <tr>
+                                        <th>content_size(bytes)</th>
+                                        <td>703</td>
+                                    </tr>
+                                    <tr>
+                                        <th>response_time(ms)</th>
+                                        <td>229</td>
+                                    </tr>
+                                    <tr>
+                                        <th>elapsed(ms)</th>
+                                        <td>229</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </td>
+    </tr>
+</table>
+</body>
