@@ -8,6 +8,10 @@ __pycache__/
 *.pyc
 .python-version
 logs/
+results/
+report/
+reportweb/
+
 
 # plugin
 debugtalk.bin
